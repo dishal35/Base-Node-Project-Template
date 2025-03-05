@@ -4,14 +4,8 @@ class CrudRepository{
         this.model=model
     }
     async create(data){
-        try{
         const response=await this.model.create(data);
         return response;
-        }
-        catch(error){
-            Logger.error("Crud Repo Error:create")
-            throw error;
-        }
     }
     async destroy(data){
         try{
